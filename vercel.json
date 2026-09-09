@@ -1,0 +1,18 @@
+{
+  "services": {
+    "gift-adokie": {
+      "root": ".",
+      "framework": "vite",
+      "buildCommand": "npm ci && npm run build"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "type": "service",
+        "service": "gift-adokie"
+      }
+    }
+  ]
+}
